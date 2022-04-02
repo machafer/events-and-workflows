@@ -8,9 +8,9 @@ export INVENTORY_TABLE=$(aws cloudformation describe-stacks --stack-name $1 \
 
 echo "Loading sample data to the INVENTORY_TABLE (${INVENTORY_TABLE}) ..."
 
-aws dynamodb put-item --table-name $INVENTORY_TABLE --item file://inventory1.json
-aws dynamodb put-item --table-name $INVENTORY_TABLE --item file://inventory2.json
-aws dynamodb put-item --table-name $INVENTORY_TABLE --item file://inventory3.json
+aws dynamodb put-item --table-name $INVENTORY_TABLE --item file://./data/inventory1.json
+aws dynamodb put-item --table-name $INVENTORY_TABLE --item file://./data/inventory2.json
+aws dynamodb put-item --table-name $INVENTORY_TABLE --item file://./data/inventory3.json
 
 echo "Done!"
 
@@ -19,8 +19,8 @@ export CUSTOMER_TABLE=$(aws cloudformation describe-stacks --stack-name $1 \
 
 echo "Loading sample data to the CUSTOMER_TABLE (${CUSTOMER_TABLE}) ..."
 
-aws dynamodb put-item --table-name $CUSTOMER_TABLE --item file://customer1.json
-aws dynamodb put-item --table-name $CUSTOMER_TABLE --item file://customer2.json
-aws dynamodb put-item --table-name $CUSTOMER_TABLE --item file://customer3.json
+aws dynamodb put-item --table-name $CUSTOMER_TABLE --item file://./data/customer1.json
+aws dynamodb put-item --table-name $CUSTOMER_TABLE --item file://./data/customer2.json
+aws dynamodb put-item --table-name $CUSTOMER_TABLE --item file://./data/customer3.json
 
 echo "Done!"

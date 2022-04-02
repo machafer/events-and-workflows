@@ -1,0 +1,8 @@
+[
+    {
+      "EventBusName": "AppEventBus-events-and-workflows",
+      "Source": "Logistics",
+      "Detail": "{ \"customerId\": \"customer-1\", \"orderId\": \"2022-04-02T19:53:20.752Z\" }",
+      "DetailType": "DeliveryCanceled"
+    }
+  ]
